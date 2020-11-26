@@ -1,0 +1,65 @@
+<!doctype html>
+
+
+<html>
+<head>
+<title>
+
+    this is the first lesson about JS
+
+</title>
+
+<h1 id="headline"> Java lesson</h1>
+<script>
+    document.getElementById("headline").innerHTML="new java script lesson";   
+   </script>
+</head>
+
+<body>
+<p id="paragrph 1">
+this is a random text if you want to see who wrote this - press the button
+
+</p>
+<button type="button" onclick="myfunction()">Click me
+
+</button>
+
+<br>
+<br>
+<IMG id=image src="C:\Users\ntishkev\OneDrive - Intel Corporation\Desktop\NT\WEB\Repos\Hello-World-NoamTish\tokyo.jpg",alt="pic 1", style="width: 100px ;transform:rotate(90deg);">
+<br>
+<br>
+<button type="button" onclick="document.getElementById('image').src='C:\Users\ntishkev\OneDrive - Intel Corporation\Desktop\NT\WEB\Repos\Hello-World-NoamTish\profile_picture.jpg'">Next pic </button>
+<button type="button" onclick="prevPIC()">Previous pic </button>
+
+
+
+<script>
+    function myfunction(){
+    document.getElementById("paragrph 1").innerHTML="Noam Tishkevich";
+    
+    }
+    
+    function NEXTPIC(){
+    document.getElementById("image").src="C:\Users\ntishkev\OneDrive - Intel Corporation\Desktop\NT\WEB\Repos\Hello-World-NoamTish\tokyo.jpg"
+    
+    }
+    function prevPIC(){
+    document.getElementById("image").src="C:\Users\ntishkev\OneDrive - Intel Corporation\Desktop\NT\WEB\Repos\Hello-World-NoamTish\profile_picture.jpg"
+    document.getElementById("image").style="width=40px"
+    }
+    
+    
+    
+     
+    
+    </script>
+
+
+
+
+</body>
+
+
+
+</html>
