@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+
+    <h1> lesson number 6</h1>
+
+             <title>this is the second lesson in JS </title>
+
+                
+             
+        <script>
+            
+            
+            function writingFunction(x) {
+               
+               
+            x.style.background="red";
+
+
+            }
+            
+            function loadIMG() {
+
+                "LOADING....."
+               
+   
+   
+               }
+
+
+
+    
+        
+
+
+
+
+        </script>
+
+</head>
+    
+
+
+<body>
+    <!--exmp to event -->
+Enter your name: <input type="text" onfocus="writingFunction(this)">
+
+
+<h3 onmouseover="style.color='red'" onmouseout="style.color='black'">now we will add mouse trick </h3 >
+
+
+
+    <img src="tokyo.jpg" alt="" witdh="200px" height="200px" onload="loadIMG()">
+
+
+
+    <p id="LOOP"></p>
+
+
+    <script> 
+    
+    var TEXT="" ;
+    
+   var A1= ["this ","is ", "an ","array"];
+
+   for (i in A1){
+
+   TEXT+=A1[i];
+
+
+
+
+
+
+   }
+
+
+
+
+   document.getElementById("LOOP").innerHTML=TEXT;
+
+</script>
+
+
+<!-- objes example-->
+<script>
+var person ={name:"noam",age:26};
+document.write(person.name);
+
+ 
+
+</script>
+
+
+<h2> second try</h2>
+<script>
+
+    
+
+var word="noam tishkevich" ;
+
+var A1= ["this ","is ", "an ","array"];
+
+for (m in word){
+
+document.write(word[m]+ "<br>");
+
+}
+</script>
+
+
+
+
+
+</body>
+
+</html>
