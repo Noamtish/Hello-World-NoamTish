@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% set page_name ='homepage' %}
+
+{% include('header.html')%}
+
+
+
+
+{% block temp2 %}
+
+ <h1> {{name|lower}}  DOGS  </h1><br>
+<h2> you are inside new html</h2><br>
+<h3>Those are the names of all my dogs  <ol>
+    {%  for dog in dogs %}
+ <li> {{dog|upper}} </li>
+    {% endfor%}
+
+
+</ol>
+
+
+     </h3>
+{% endblock %}

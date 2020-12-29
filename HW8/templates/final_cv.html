@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<title> cv of a industrial engineer student</title>
+<link rel="stylesheet" href="{{ url_for('static',filename='CSS/contact.css') }}">
+</head>
+<body >
+<h1>Noam Tishkevich CV</h1>
+<script src="{{ url_for('static',filename='js/func1.js') }}">
+
+</script>
+<div class="gridcontainer">
+     <div class="cv">
+        <h3>About Me</h3>
+        <p>
+           <B>Highly perceptive and detail-oriented, self-learner and multi tasker with a high work ethic. <br>
+            I'm  a true team player,Mission oriented  and thrive on creative problem solving. </B> 
+           
+        </p>
+        <h3>Skills</h3>
+        <ul>
+         <b>  <li> SQL </li> 
+           <li> ETL tools-SSIS,Talend </li>
+           <li> Programing langauges- Java , Python , RStudio, HTML ,VB </li>
+           <li> Visualization tools- Power BI, Tableu </li>
+        </b>
+        </ul>
+
+                         <a href="Contact"><button type="button"> Contact Me </button></a>
+
+                         <a href="https://www.linkedin.com/in/noam-tishkevich-63b49218b/"> <img src="{{ url_for('static',filename='img/linkdin.PNG') }}" alt="sorry" width=100px height="100px" ></a>
+
+                         <a href="{{ url_for('static',filename='Noam Tishkevich CV.docx') }}"> <img src="{{ url_for('static',filename='img/download_cv.png') }}" onmouseover="img_increase()" onmouseout="img_decrease()" alt="sorry" width=100px height="100px"  id="image" ></a>
+
+    </div> 
+
+    <div class="pic">
+
+
+
+    <img src="{{ url_for('static',filename='img/profile_picture.jpg') }}" alt="sorry" width=auto height="400px"> <br>
+
+     <b> <a href="list_user.html">contact list</a>            </b> 
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+</html>

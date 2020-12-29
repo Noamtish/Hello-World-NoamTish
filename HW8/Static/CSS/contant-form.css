@@ -1,0 +1,30 @@
+body{
+
+    background-image:url("background_pic.jpg");
+}
+
+.form-container{
+    display: inline-block;
+   padding: 20px;
+   width: 600px;
+   font-size:large;
+   padding:5px;
+}
+.move{
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    
+    animation: exmp 1s ease infinite;
+    animation: exmp2 3s ease infinite;
+  
+}
+
+
+
+
+
+@keyframes exmp2{
+    from{margin-left:0%; background-color:red;}
+to{margin-left:60%;background-color:rgb(40, 9, 179)}
+}

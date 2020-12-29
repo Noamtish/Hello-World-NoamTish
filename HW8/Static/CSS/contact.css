@@ -1,0 +1,93 @@
+
+
+body{
+    font-family: calibri;
+   
+    font-size: 20px;
+ 
+    background-image:url('background_pic.jpg');
+
+}
+
+.gridcontainer{
+    display:grid;
+    grid-template-areas:"left left left right right";
+    grid-gap: 5px;
+
+    
+    
+    
+    }
+    
+    .cv{
+    grid-area:left;
+    
+    
+    }
+    
+    
+    .pic{
+     grid-area: right;
+    
+    
+    }
+
+
+form{
+    background-color: rgb(211, 56, 56);
+    font-family: Calibri;
+    display: inline-block;
+   
+}
+
+
+
+h1{
+    height: 50px;
+    color: var(--top-headline-color);
+    text-decoration-line: none;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-align: center;
+}   
+
+img{
+    display: inline block;
+margin: auto;
+margin-left: 10%;
+margin-right: 10%;
+background-color: transparent;
+}
+
+button{
+vertical-align: top;
+font-size: 30px;
+width: 150px;;
+height: 100px;
+background-color: transparent;
+
+
+}
+
+button:hover{
+background-color: #bad61a;
+color: white;
+}
+
+.move{
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    
+    animation: exmp 1s ease infinite;
+    animation: exmp2 3s ease infinite;
+  
+}
+
+
+
+
+
+@keyframes exmp2{
+    from{margin-left:0%; background-color:red;}
+to{margin-left:60%;background-color:rgb(40, 9, 179)}
+}

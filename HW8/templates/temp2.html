@@ -1,0 +1,18 @@
+{% extends 'Assignment8.html' %}
+
+{% block temp2 %}
+
+ <h1> since you are not intersted in my dogs  </h1><br>
+
+<h3>Those are the names
+    of all my cats  <ol>
+    {%  for cat in cats %}
+ <li> {{cat|upper}} </li>
+    {% endfor%}
+
+
+</ol>
+
+
+     </h3>
+{% endblock %}
