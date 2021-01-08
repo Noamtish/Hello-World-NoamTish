@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <h1>You used the {{R_method}} form</h1>
+</head>
+<body>
+
+{% if username != '' %}
+
+<h1>Hello dear {{username}} </h1>
+
+
+
+{% endif %}
+
+<form action="/Assignment9" method="get">
+
+
+    <h2> GET form :Please insert Name to find the job </h2>
+
+<input name ="name" placeholder="Name" > <br><br>
+
+    <input type="submit" value=search >
+    <br>
+
+
+</form>
+    {% if name=='empty'%} <!--first time in the url-->
+
+    {% else %}
+
+        {% if name == ''%} <!--submit without name-->
+            The job of noam is {{User_List['noam']}}<br>
+            The job of sharon is {{User_List['sharon']}}<br>
+            The job of tomer is {{User_List['tomer']}}<br>
+            The job of amit is {{User_List['amit']}}
+        {% else %}<!--submit with name-->
+            {% if name in User_List.keys() %}
+
+            <h3> The job of {{name}} is {{User_List[name]}}  </h3>
+            {% else %}
+              <h3> The name {{name}} is not on the list   </h3>
+            {% endif%}
+        {% endif%}
+    {% endif%}
+<br>
+
+{% if session.get('logged_in') == False %}
+
+<form action="/Assignment9" method="POST">
+
+
+    <h2> POST form :Please insert credentials </h2>
+
+<input name = "username" placeholder="UserName" > <br>
+<input name ="password" placeholder="Password"> <br>
+    <input type="submit" value="Register" >
+
+
+
+</form>
+
+
+
+
+{% endif %}
+<br>
+<br>
+
+{% if session.get('logged_in') == True %}
+<form action="/Assignment9_logout" method="POST">  <!--not sure if the method correct  -->
+
+
+
+
+<input type="submit" value="logout" > <br>
+
+</form>
+{% endif %}
+</body>
+</html>

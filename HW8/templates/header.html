@@ -7,4 +7,12 @@ This is a header from the include {{page_name}}
     {% else %}
         <h2>this is not Home</h2>
     {% endif %}
+
+{% if session.logged_in %}
+Hello dear {{ session.get('username') }}
+{% else %}
+please log in
+{% endif %}
+
+
 </header>
