@@ -1,11 +1,41 @@
 from flask import Flask, render_template,redirect,url_for,request,session
-
+import mysql.connector
 app=Flask(__name__)
-app.secret_key= 'session123'
+app.secret_key = 'session126'
+
+
+
+# def interact_db(query,query_type: str):
+#     return_value=False
+#     connection =mysql.connector.connect(host='localhost',
+#                                         user='root',password='poipbnm789',database='web_class')
+#     cursor=connection.cursor(named_tuple=True) #allow you to use .id
+#     cursor.excute(query)
+#
+#     if query_type == 'commit':
+#         #when use insert update delete statement
+#         connection.commit()
+#         return_value=True
+#
+#     if query_type == 'commit':
+#         # when use insert update delete statement
+#         query_result=cursor.fetchall()
+#         return_value = query_result
+#
+#     connection.close()
+#     cursor.close()
+#     return  return_value
+#
+#
+#
+#
+#
+
 
 
 @app.route('/')
 def Home():
+    session['username']= ''
     return 'Home Page'
 
 @app.route('/page1')
@@ -52,7 +82,7 @@ def A9():
 
 
 
-  return render_template('Assignment9.html', R_method=request.method, name=name, User_List=User_List, username=session['username'])
+  return render_template('Assignment9.html', R_method=request.method, name=name, User_List=User_List,username=session['username'])
 
 
 
