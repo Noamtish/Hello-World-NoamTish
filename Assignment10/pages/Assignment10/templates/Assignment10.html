@@ -3,16 +3,80 @@
 {% set page_head_title = 'About' %}
 
 {% block page_head_css %}
-    <link rel="stylesheet" href="{{ url_for('about.static', filename='css/about.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('Assignment10.static', filename='css/Assignment10.css') }}"/>
+   {% if session.action  %}
+    The {{ session.action  }} action was excuted
+    {% endif %}
 {% endblock %}
 
 {% block page_body_main_content %}
-    <h1>About us</h1>
-    <p>This is an example about us page</p>
+
+    <h1>Users page</h1>
+ <form action="/Assignment10_insert" method="post">
+
+
+    <h2> insert form :Please insert new user </h2>
+     <label for="username"><b>Username</b></label>
+    <input name ="username" placeholder="UserName" > <br><br>
+      <label for="job"><b>Job</b></label>
+    <input name ="job" placeholder="job" > <br><br>
+      <label for="password"> <b>Password</b></label>
+     <input type="password" name ="password" > <br><br>
+    <input type="submit" value=Register >
+    <br>
+
+
+</form>
+     <form action="/Assignment10_update" method="post">
+
+
+    <h2> Update form :Please insert your new inputs  </h2>
+
+      <label for="username"><b>Username</b></label>
+    <input name ="username" placeholder="UserName" > <br><br>
+      <label for="job"><b>Job</b></label>
+    <input name ="job" placeholder="job" > <br><br>
+      <label for="password"> <b>Password</b></label>
+     <input type="password" name ="password" > <br><br>
+    <input type="submit" value=Register >
+    <br>
+
+
+</form>
+
+
+     <form action="/Assignment10_delete" method="get">
+
+
+    <h2> Delete form :Please insert the username you want to delete  </h2>
+          <label for="username"><b>Username</b></label>
+    <input name ="username" placeholder="UserName" > <br><br>
+
+{#     <input type="password" name ="password" placeholder="UserName" > <br><br>#}
+    <input type="submit" value=Delete >
+    <br>
+
+
+</form>
+
+{% if users  %}
+    {%  for user in users  %}
+
+          <b>{{ user.username }}</b> :  ({{ user.job }})<br>
+
+    {% endfor %}
+
+    {% endif %}
+
+
+
+
+
+
 {% endblock %}
 
 {% block page_body_footer %}{% endblock %}
 
 {% block page_body_js %}
-    <script src="{{ url_for('about.static', filename='js/about.js') }}"></script>
+    <script src="{{ url_for('Assignment10.static', filename='js/Assignment10.js') }}"></script>
 {% endblock %}
