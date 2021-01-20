@@ -21,7 +21,8 @@ app.register_blueprint(catalog)
 from pages.Assignment10.Assignment10 import Assignment10
 app.register_blueprint(Assignment10)
 
-
+from pages.HW11.HW11 import HW11
+app.register_blueprint(HW11)
 ## Page error handlers
 # from pages.page_error_handlers.page_error_handlers import page_error_handlers
 # app.register_blueprint(page_error_handlers)

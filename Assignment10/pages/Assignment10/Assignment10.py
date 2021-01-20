@@ -1,7 +1,8 @@
 from flask import Blueprint, render_template
 from flask import Flask,redirect,url_for,request,session
 import mysql.connector
-from utilities.db.db_manager import  dbManager
+from Assignment10.utilities.db.db_manager import dbManager
+
 
 # Assignment10 blueprint definition
 Assignment10 = Blueprint('Assignment10', __name__, static_folder='static', static_url_path='/Assignment10', template_folder='templates')
